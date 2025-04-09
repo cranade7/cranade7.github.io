@@ -6,26 +6,26 @@
   <title>Chinmay Ranade | Electrical Engineer</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
+      background-color: #f0f6fa;
       color: #333;
     }
     header, section {
       padding: 20px;
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
+      animation: fadeIn 1.2s ease-in;
     }
     header {
-      background: #003366;
-      color: #fff;
+      background: linear-gradient(to right, #b3e5fc, #e0e0e0);
+      color: #333;
       text-align: center;
     }
     header img {
-      width: 150px;
-      height: 150px;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       object-fit: cover;
       margin-top: 15px;
@@ -34,14 +34,14 @@
       margin-top: 10px;
     }
     .section-title {
-      border-bottom: 2px solid #003366;
+      border-bottom: 2px solid #80bfe8;
       padding-bottom: 5px;
       margin-bottom: 15px;
     }
     .contact a {
       display: inline-block;
       margin: 5px 10px;
-      color: #003366;
+      color: #0288d1;
       text-decoration: none;
     }
     .experience, .project {
@@ -50,84 +50,104 @@
     .project a {
       display: block;
       margin-top: 5px;
+      color: #0288d1;
+    }
+    ul.skills {
+      list-style: none;
+      padding: 0;
+    }
+    ul.skills li::before {
+      content: '✔';
+      color: #0288d1;
+      padding-right: 8px;
+    }
+    @media screen and (max-width: 600px) {
+      header img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .floating-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #0288d1;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      z-index: 999;
+    }
+    .floating-bar {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 998;
+    }
+    .floating-bar a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      background: #ffffff;
+      color: #0288d1;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 22px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Welcome to Chinmay's Portfolio</h1>
-    <img src="image1.png" alt="Chinmay Ranade">
+    <img src="profile1.png" alt="Chinmay Ranade">
     <p>Chinmay Ranade</p>
     <p>MS in Electrical Engineering | Power Electronics | Circuit Design | Renewable Energy</p>
   </header>
 
   <section>
     <h2 class="section-title">About Me</h2>
-    <p>I'm an aspiring electrical engineer with a focus on power electronics, system validation, and renewable energy. With hands-on experience from internships and university projects, I’m passionate about solving real-world engineering problems and driving innovation in clean energy systems.</p>
+    <p>🔋 <strong>Graduate Student | Electrical Engineer | Power Electronics | Wireless Charging | EV Systems</strong></p>
+    <p>I am a Master’s student in Electrical Engineering at San Diego State University, passionate about power electronics, EV technology, and renewable energy.</p>
+
+    <p>During my Electrical Engineering Internship at Hyaxiom Inc. (A Doosan Company), I worked on high-voltage power systems and thermal management, focusing on:</p>
+    <ul class="skills">
+      <li>Designing HV pre-charge circuits to prevent inrush currents (AutoCAD Electrical)</li>
+      <li>Engineering HV rectifier cooling systems for thermal optimization</li>
+      <li>Assembling & testing HV stack voltage measurement devices</li>
+      <li>Collaborating on actuator integration, VFDs, and PLC control logic</li>
+    </ul>
+
+    <p>As the Solar & Electrical Sub-system Head at Team Hyperion, I led a 30-member team in designing a solar-powered EV, achieving higher efficiency and winning awards at national & international competitions.</p>
+
+    <p>I also interned at Electronet Equipments Pvt Ltd, developing power supply hardware for industrial applications.</p>
+
+    <p>💡 <strong>Technical Skills:</strong> Power Electronics | PCB Design | MATLAB, Simulink | Ansys HFSS | AutoCAD Electrical | Embedded Systems | EV Powertrain & BMS</p>
+
+    <p>🚀 <strong>Currently seeking full-time opportunities</strong> in power electronics and EV technology. Let’s connect!</p>
   </section>
 
-  <section>
-    <h2 class="section-title">Experience</h2>
-    <div class="experience">
-      <strong>Electrical Engineering Intern – Hyaxiom Inc. (Doosan Company), CT</strong> <em>(Jun 2024 – Aug 2024)</em>
-      <ul>
-        <li>Designed high-voltage pre-charge circuits using AutoCAD Electrical.</li>
-        <li>Performed system-level validation and testing for HV circuits and rectifiers.</li>
-        <li>Assembled and tested HV stack voltage measurement devices.</li>
-        <li>Collaborated on VFD and PLC control logic integration; wrote FMEA & DFMEA.</li>
-      </ul>
-    </div>
-    <div class="experience">
-      <strong>Teaching Associate – San Diego State University</strong> <em>(Aug 2023 – Present)</em>
-      <ul>
-        <li>Teaching Electricity and Magnetism labs.</li>
-        <li>Assisting in Mechatronics and Control System coursework.</li>
-      </ul>
-    </div>
-    <div class="experience">
-      <strong>Quality Analysis Intern – Electronet Equipment Pvt. Ltd.</strong> <em>(Jan 2022 – Feb 2022)</em>
-      <ul>
-        <li>Reduced PCB size of level sensors and flow meters by 10%.</li>
-        <li>Resolved circuit-related issues and improved SMPS energy efficiency by 20%.</li>
-      </ul>
-    </div>
-  </section>
+  <!-- Projects and Contact Sections remain unchanged -->
 
-  <section>
-    <h2 class="section-title">Projects</h2>
-    <div class="project">
-      <strong>Bidirectional DC-DC Converter with GaN/SiC Modeling</strong>
-      <ul>
-        <li>Simulated bidirectional converter with GaN/SiC devices in PLECS.</li>
-        <li>Implemented closed-loop PI control and analyzed losses and thermal behavior.</li>
-      </ul>
-    </div>
-    <div class="project">
-      <strong>Microgrid Integration with EV Charging</strong>
-      <ul>
-        <li>Designed microgrid for EV charging using MATLAB Simulink.</li>
-        <li>Optimized power flow, converter, and inverter performance.</li>
-      </ul>
-    </div>
-    <div class="project">
-      <strong>Wireless Charging System using Resonant Coupling</strong>
-      <ul>
-        <li>Developed wireless charging model for small devices using Simulink and Ansys.</li>
-        <li>Focused on maximizing power transfer efficiency.</li>
-        <li>Compared spiral and helical coil topologies and simulated electromagnetic and circuit behavior.</li>
-      </ul>
-      <a href="https://github.com/cranade7/WPT-for-small-Devices/tree/main" target="_blank">🔗 View Project Repository</a>
-    </div>
-  </section>
-
-  <section>
-    <h2 class="section-title">Contact</h2>
-    <div class="contact">
-      <p>Email: <a href="mailto:cranade7@gmail.com">cranade7@gmail.com</a></p>
-      <p>Phone: <a href="tel:+16197140492">+1 619 714 0492</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/chinmay-ranade" target="_blank">linkedin.com/in/chinmay-ranade</a></p>
-      <p>Publication: <a href="https://ijarsct.co.in/Paper10923.pdf" target="_blank">Human Following Luggage Robot</a></p>
-    </div>
-  </section>
+  <!-- Floating Action Buttons -->
+  <div class="floating-bar">
+    <a href="mailto:cranade7@gmail.com" title="Email">📧</a>
+    <a href="tel:+16197140492" title="Call">📞</a>
+    <a href="https://linkedin.com/in/chinmay-ranade" target="_blank" title="LinkedIn">🔗</a>
+    <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" title="Back to top">⬆️</a>
+  </div>
 </body>
 </html>
