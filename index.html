@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chinmay Ranade | Portfolio</title>
   <style>
     :root {
-      --light-blue: #f1fbff;
+      --sky-blue: #e3f4fc;
+      --off-white: #f9f9f9;
       --primary: #0288d1;
       --text-dark: #333;
+      --card-accent: #d6effa;
     }
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: var(--light-blue);
+      background-color: var(--off-white);
       color: var(--text-dark);
       scroll-behavior: smooth;
     }
     header {
       text-align: center;
       padding: 2rem 1rem 1rem;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
+      background: var(--sky-blue);
     }
     .nav {
       display: flex;
       justify-content: center;
       gap: 2rem;
       padding: 1rem;
+      background: var(--sky-blue);
       border-bottom: 2px solid var(--primary);
     }
     .nav a {
@@ -56,20 +56,30 @@
     }
     .card-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1rem;
       margin-top: 1rem;
     }
     .card {
-      background: #fff;
-      padding: 1rem;
+      background: var(--card-accent);
       border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
       transition: 0.3s ease-in-out;
+      cursor: pointer;
     }
     .card:hover {
       transform: translateY(-5px);
+    }
+    .card-title {
+      background: var(--primary);
+      color: white;
+      padding: 0.75rem;
+      font-weight: bold;
+    }
+    .card-sub {
+      background: white;
+      padding: 0.75rem;
     }
     .details {
       display: none;
@@ -79,82 +89,94 @@
     .card.active .details {
       display: block;
     }
-    .skills {
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .skills-group {
+      background: white;
+      border-left: 5px solid var(--primary);
+      padding: 1rem;
+    }
+    .skills-group h4 {
+      margin-top: 0;
+    }
+    .skills-group ul {
+      padding-left: 1rem;
+    }
+    .contact-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
+      gap: 1rem;
+      justify-content: space-between;
       margin-top: 1rem;
     }
-    .skill {
-      background: #fff;
-      border: 1px solid var(--primary);
-      border-radius: 20px;
-      padding: 0.4rem 0.8rem;
-      font-size: 0.85rem;
+    .contact-card {
+      background: white;
+      border-left: 5px solid var(--primary);
+      padding: 1rem;
+      flex: 1;
+      min-width: 250px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Chinmay's Portfolio</h1>
-    <img src="20241126_130900.jpg" alt="Chinmay Ranade" class="profile-pic" />
+    <img src="profile1.png" alt="Chinmay Ranade" class="profile-pic" />
   </header>
   <nav class="nav">
     <a href="#about">About Me</a>
     <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <section id="about">
     <h2 class="section-title">About Me</h2>
     <p>I am a Master’s student in Electrical Engineering at San Diego State University, passionate about power electronics, EV technology, and renewable energy.</p>
-    <p><strong>Skills & Technologies:</strong></p>
-    <div class="skills">
-      <div class="skill">Power Electronics</div>
-      <div class="skill">PCB Design</div>
-      <div class="skill">MATLAB/Simulink</div>
-      <div class="skill">Ansys HFSS</div>
-      <div class="skill">AutoCAD Electrical</div>
-      <div class="skill">Embedded Systems</div>
-      <div class="skill">EV Powertrain</div>
-      <div class="skill">BMS</div>
-      <div class="skill">Python</div>
-      <div class="skill">Altium</div>
-      <div class="skill">PLECS</div>
-      <div class="skill">ADS</div>
-    </div>
   </section>
 
   <section id="experience">
     <h2 class="section-title">Experience</h2>
     <div class="card-grid">
       <div class="card" onclick="toggleDetails(this)">
-        <strong>Hyaxiom Inc. – Electrical Engineering Intern</strong>
-        <p>Jun 2024 – Aug 2024</p>
-        <div class="details">
-          <p>Worked on HV pre-charge circuit design, cooling system optimization, HV stack testing, and PLC/VFD integration using AutoCAD Electrical.</p>
+        <div class="card-title">Hyaxiom Inc. – Electrical Engineering Intern</div>
+        <div class="card-sub">
+          <p>Jun 2024 – Aug 2024</p>
+          <div class="details">
+            <p>Designed HV pre-charge circuits, optimized cooling, tested HV stacks, worked on PLC/VFD control using AutoCAD Electrical.</p>
+          </div>
         </div>
       </div>
       <div class="card" onclick="toggleDetails(this)">
-        <strong>San Diego State University – Teaching Associate</strong>
-        <p>Aug 2023 – Present</p>
-        <div class="details">
-          <p>Managed Electricity & Magnetism labs; supported Mechatronics and Control Systems teaching and grading.</p>
+        <div class="card-title">SDSU – Teaching Associate</div>
+        <div class="card-sub">
+          <p>Aug 2023 – Present</p>
+          <div class="details">
+            <p>Teaching Electricity & Magnetism labs and supporting Mechatronics coursework.</p>
+          </div>
         </div>
       </div>
       <div class="card" onclick="toggleDetails(this)">
-        <strong>Electronet Equipments – Quality Intern</strong>
-        <p>Jan 2022 – Feb 2022</p>
-        <div class="details">
-          <p>Reduced PCB size, resolved sensor circuitry bugs, and improved SMPS energy efficiency by 20%.</p>
+        <div class="card-title">Electronet – Quality Intern</div>
+        <div class="card-sub">
+          <p>Jan 2022 – Feb 2022</p>
+          <div class="details">
+            <p>Improved SMPS efficiency, debugged sensors, reduced PCB size of flow and level meters.</p>
+          </div>
         </div>
       </div>
       <div class="card" onclick="toggleDetails(this)">
-        <strong>Team Hyperion – Solar EV Subsystem Lead</strong>
-        <p>Jul 2021 – May 2023</p>
-        <div class="details">
-          <p>Led 30-member solar subsystem team, developed HV/LV circuits, implemented MPPT, CAN/I2C, buck/boost, AC-DC converters. Supported autonomous driving modules and managed resources/finances.</p>
+        <div class="card-title">Team Hyperion – Solar EV Subsystem Lead</div>
+        <div class="card-sub">
+          <p>Jul 2021 – May 2023</p>
+          <div class="details">
+            <p>Designed HV/LV EV systems, MPPT & AC/DC converters, led solar team, implemented CAN/I2C protocols and autonomous circuits.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -164,50 +186,145 @@
     <h2 class="section-title">Projects</h2>
     <div class="card-grid">
       <div class="card" onclick="toggleDetails(this)">
-        <strong>Wireless Power Transfer (WPT)</strong>
-        <p>Simulink + Ansys</p>
-        <div class="details">
-          <p>Designed resonant wireless charging system for small devices.<br><a href="https://github.com/cranade7/WPT-for-small-Devices" target="_blank">🔗 GitHub</a></p>
+        <div class="card-title">Wireless Power Transfer (WPT)</div>
+        <div class="card-sub">
+          <p>Simulink + Ansys</p>
+          <div class="details">
+            <ul>
+              <li>Resonant inductive charging system for small electronics</li>
+              <li>Tools: MATLAB Simulink, Ansys Electronics</li>
+              <li>Learned coil tuning, waveform shaping, control feedback</li>
+              <li>Can be scaled to larger EVs or robotic charging</li>
+              <li><a href="https://github.com/cranade7/WPT-for-small-Devices" target="_blank">🔗 GitHub</a></li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="card" onclick="toggleDetails(this)">
-        <strong>Microgrid with EV Charging</strong>
-        <p>V2G & G2V | Simulink</p>
-        <div class="details">
-          <p>Bidirectional charger with solar PV integration.<br><a href="https://github.com/cranade7/Microgrid-V2G-and-G2V" target="_blank">🔗 GitHub</a></p>
+        <div class="card-title">Microgrid with EV Charging</div>
+        <div class="card-sub">
+          <p>V2G & G2V | Simulink</p>
+          <div class="details">
+            <ul>
+              <li>Integrated bidirectional charging with solar PV & inverter</li>
+              <li>Simulink model includes DC-DC, inverter & control</li>
+              <li>Focus on grid stability, synchronization & charge flow</li>
+              <li>Learned system-level integration and power balancing</li>
+              <li><a href="https://github.com/cranade7/Microgrid-V2G-and-G2V" target="_blank">🔗 GitHub</a></li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="card" onclick="toggleDetails(this)">
-        <strong>PCB Power Integrity</strong>
-        <p>Cadence PowerSI</p>
-        <div class="details">
-          <p>Simulated voltage ripple & decoupling capacitor efficiency.<br><a href="https://github.com/cranade7/PCB-Simulation-and-Power-Integrity" target="_blank">🔗 GitHub</a></p>
+        <div class="card-title">PCB Power Integrity</div>
+        <div class="card-sub">
+          <p>Cadence PowerSI</p>
+          <div class="details">
+            <ul>
+              <li>Simulated ripple, voltage drop and EMI zones</li>
+              <li>Tech: PowerSI, Method of Moments, VRM placement</li>
+              <li>Learned signal/power integrity in high-speed boards</li>
+              <li>Can extend to DDR/SoC decoupling and EMI filters</li>
+              <li><a href="https://github.com/cranade7/PCB-Simulation-and-Power-Integrity" target="_blank">🔗 GitHub</a></li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="card" onclick="toggleDetails(this)">
-        <strong>Human-Following Robot</strong>
-        <p>ESP-32 + Sensors</p>
-        <div class="details">
-          <p>Bluetooth RSSI-based luggage follower robot.<br><a href="https://github.com/cranade7/-Human-Following-Luggage-Carrying-Robot" target="_blank">🔗 GitHub</a></p>
+        <div class="card-title">Human-Following Robot</div>
+        <div class="card-sub">
+          <p>ESP-32 + Sensors</p>
+          <div class="details">
+            <ul>
+              <li>Follows user using Bluetooth RSSI + compass direction</li>
+              <li>Tech: ESP-32, HC-05, ultrasonic, Android App</li>
+              <li>Learned wireless sensing and actuator control</li>
+              <li>Could add GPS + camera for smarter tracking</li>
+              <li><a href="https://github.com/cranade7/-Human-Following-Luggage-Carrying-Robot" target="_blank">🔗 GitHub</a></li>
+              <li><a href="https://ijarsct.co.in/Paper10923.pdf" target="_blank">📄 IJARSCT Publication</a></li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="card" onclick="toggleDetails(this)">
-        <strong>Park-Ezee</strong>
-        <p>RFID + Arduino</p>
-        <div class="details">
-          <p>Autonomous parking with RFIC and I2C logic.<br><a href="https://github.com/cranade7/Autonomous-Parking-System" target="_blank">🔗 GitHub</a></p>
+        <div class="card-title">Park-Ezee</div>
+        <div class="card-sub">
+          <p>RFID + Arduino</p>
+          <div class="details">
+            <ul>
+              <li>Smart parking access using RF tags and embedded logic</li>
+              <li>Tech: Proteus, Arduino IDE, I2C, DC motors</li>
+              <li>Learned RF communication, embedded design</li>
+              <li>Can add real-time app dashboard and camera ID</li>
+              <li><a href="https://github.com/cranade7/Autonomous-Parking-System" target="_blank">🔗 GitHub</a></li>
+            </ul>
+          </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      <div class="skills-group">
+        <h4>Skills</h4>
+        <ul>
+          <li>Power Electronics</li>
+          <li>PCB Design</li>
+          <li>Renewable Systems</li>
+        </ul>
+      </div>
+      <div class="skills-group">
+        <h4>Software</h4>
+        <ul>
+          <li>MATLAB/Simulink</li>
+          <li>Ansys HFSS</li>
+          <li>Cadence PowerSI</li>
+          <li>AutoCAD Electrical</li>
+          <li>Altium</li>
+        </ul>
+      </div>
+      <div class="skills-group">
+        <h4>Languages</h4>
+        <ul>
+          <li>Python</li>
+          <li>C/C++</li>
+          <li>Embedded C</li>
+        </ul>
+      </div>
+      <div class="skills-group">
+        <h4>Tools</h4>
+        <ul>
+          <li>Oscilloscope</li>
+          <li>Multimeter</li>
+          <li>Signal Generator</li>
+          <li>Vector Network Analyzer (VNA)</li>
+        </ul>
       </div>
     </div>
   </section>
 
   <section id="contact">
     <h2 class="section-title">Contact</h2>
-    <p>📧 <a href="mailto:cranade7@gmail.com">cranade7@gmail.com</a></p>
-    <p>📱 <a href="tel:+16197140492">+1 619 714 0492</a></p>
-    <p>🔗 <a href="https://linkedin.com/in/chinmay-ranade" target="_blank">linkedin.com/in/chinmay-ranade</a></p>
-    <p>📄 <a href="https://ijarsct.co.in/Paper10923.pdf" target="_blank">Human Following Robot Publication</a></p>
-    <p>📁 <a href="Chinmay_Ranade_Resume_HV.pdf" target="_blank">Download My Resume (PDF)</a></p>
+    <div class="contact-row">
+      <div class="contact-card">
+        <strong>📧 Email</strong>
+        <p><a href="mailto:cranade7@gmail.com">cranade7@gmail.com</a></p>
+      </div>
+      <div class="contact-card">
+        <strong>📞 Phone</strong>
+        <p><a href="tel:+16197140492">+1 619 714 0492</a></p>
+      </div>
+      <div class="contact-card">
+        <strong>🔗 LinkedIn</strong>
+        <p><a href="https://linkedin.com/in/chinmay-ranade" target="_blank">linkedin.com/in/chinmay-ranade</a></p>
+      </div>
+      <div class="contact-card">
+        <strong>📁 Resume</strong>
+        <p><a href="Chinmay_Ranade_Resume_HV.pdf" target="_blank">Download Resume (PDF)</a></p>
+      </div>
+    </div>
   </section>
 
   <script>
