@@ -4,216 +4,279 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chinmay Ranade | Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTTXRVw9I9UnD7zTsi1p6DZx2K8Qk5aFS3N6Z4aUYZf0M6+GJZvXYc+e5rhUq5JoqTkLtvl2Yw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <style>
-    :root {
-      --sky-blue: #e3f4fc;
-      --off-white: #f9f9f9;
-      --primary: #0288d1;
-      --text-dark: #333;
-      --card-accent: #eef8fb;
-    }
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--off-white);
-      color: var(--text-dark);
-      scroll-behavior: smooth;
-    }
-    header {
-      text-align: center;
-      padding: 2rem 1rem 1rem;
-      background: var(--sky-blue);
-      animation: fadeIn 1s ease-in;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 2rem;
-      padding: 1rem;
-      background: var(--sky-blue);
-      border-bottom: 2px solid var(--primary);
-    }
-    .nav a {
-      text-decoration: none;
-      color: var(--text-dark);
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-    .nav a:hover {
-      color: var(--primary);
-    }
-    .profile-pic {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-top: 1rem;
-      border: 4px solid white;
-      transition: transform 0.4s ease;
-    }
-    .profile-pic:hover {
-      transform: scale(1.05);
-    }
-    section {
-      padding: 2rem 1rem;
-      max-width: 1100px;
-      margin: auto;
-    }
-    .section-title {
-      font-size: 1.6rem;
-      border-bottom: 2px solid var(--primary);
-      margin-bottom: 1rem;
-      animation: fadeIn 0.8s ease-in;
-    }
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    .card {
-      background: var(--card-accent);
-      border-radius: 10px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-      cursor: pointer;
-      overflow: hidden;
-      transition: 0.3s ease;
-      transform: translateY(0);
-    }
-    .card:hover {
-      transform: translateY(-3px);
-    }
-    .card-header {
-      background: #b6e4f8;
-      color: #003344;
-      font-weight: bold;
-      padding: 0.75rem 1rem;
-    }
-    .card-body {
-      padding: 1rem;
-      background: white;
-      font-size: 0.95rem;
-    }
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-    }
-    .skills-group {
-      background: white;
-      border-left: 5px solid var(--primary);
-      padding: 1rem;
-    }
-    .skills-group h4 {
-      margin-top: 0;
-    }
-    .skills-group ul {
-      padding-left: 1rem;
-      margin: 0;
-    }
-    .contact-row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-    .contact-card {
-      background: white;
-      border-left: 5px solid var(--primary);
-      flex: 1;
-      min-width: 220px;
-      padding: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    }
-    .contact-card i {
-      font-size: 1.2rem;
-      color: var(--primary);
-    }
-    .modal-bg {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.4);
-      z-index: 10;
-      align-items: center;
-      justify-content: center;
-      animation: fadeIn 0.4s ease-in;
-    }
-    .modal {
-      background: white;
-      max-width: 700px;
-      width: 90%;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-      position: relative;
-      max-height: 90vh;
-      overflow-y: auto;
-    }
-    .modal-close {
-      position: absolute;
-      top: 10px;
-      right: 15px;
-      font-size: 1.5rem;
-      cursor: pointer;
-      color: #555;
-    }
-    .modal h3 {
-      margin-top: 0;
-    }
-    @media (max-width: 768px) {
-      .nav {
-        gap: 1rem;
-        font-size: 0.95rem;
-      }
-      .contact-row {
-        flex-direction: column;
-      }
-      .profile-pic {
-        width: 140px;
-        height: 140px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- The rest of your website content will go here -->
+  <div class="theme-toggle">
+    <i class="fas fa-sun"></i>
+  </div>
 
-  <div class="modal-bg" id="modal-bg">
-    <div class="modal" id="modal">
-      <span class="modal-close" onclick="closeModal()">&times;</span>
-      <div id="modal-content"></div>
+  <div class="cursor-follower"></div>
+  
+  <header>
+    <div class="container">
+      <div class="logo">
+        <h1>CR<span>.</span></h1>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero-section">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="glitch-text">
+          <span aria-hidden="true">Hello, I'm Chinmay Ranade</span>
+          Hello, I'm Chinmay Ranade
+          <span aria-hidden="true">Hello, I'm Chinmay Ranade</span>
+        </h1>
+        <div class="typing-text">
+          <p>I'm an <span id="dynamic-text"></span></p>
+        </div>
+        <div class="hero-btns">
+          <a href="#projects" class="btn primary-btn">View Projects</a>
+          <a href="Chinmay_Ranade_Resume_HV.pdf" target="_blank" class="btn secondary-btn">Resume <i class="fas fa-download"></i></a>
+        </div>
+        <div class="social-icons">
+          <a href="https://linkedin.com/in/chinmay-ranade" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/cranade7" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="mailto:cranade7@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="profile1.png" alt="Chinmay Ranade" />
+        <div class="blob-animation"></div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="mouse"></div>
+      <p>Scroll Down</p>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>About Me</h2>
+        <div class="underline"></div>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <p>Hi, I'm Chinmay Ranade, an Electrical Engineering graduate from SDSU specializing in power electronics, circuit design, renewable energy systems, and embedded solutions. I'm passionate about designing efficient electrical systems and solving complex engineering challenges.</p>
+          <p>My technical expertise includes DC-DC converters, circuit design, renewable energy systems, and embedded solutions. I'm committed to creating sustainable electrical systems that drive innovation in the industry.</p>
+          <div class="stats">
+            <div class="stat-item">
+              <h3>4+</h3>
+              <p>Years Experience</p>
+            </div>
+            <div class="stat-item">
+              <h3>10+</h3>
+              <p>Projects Completed</p>
+            </div>
+            <div class="stat-item">
+              <h3>5+</h3>
+              <p>Publications</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-image">
+          <div class="image-container">
+            <img src="profile1.png" alt="Chinmay Ranade" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>My Skills</h2>
+        <div class="underline"></div>
+      </div>
+      <div class="skills-container">
+        <div class="skill-category">
+          <h3>Technical Skills</h3>
+          <div class="skill-grid">
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fas fa-bolt"></i></div>
+              <h4>Power Electronics</h4>
+              <p>DC-DC/AC-DC/AC-AC Converters, VFDs, MPPT, Power Stage Design</p>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fas fa-microchip"></i></div>
+              <h4>Circuit Design</h4>
+              <p>System Validation, PCB Design, PCBA, Wireless Charging, GaN/SiC</p>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fas fa-sun"></i></div>
+              <h4>Renewable Energy</h4>
+              <p>Solar Systems, Battery Management, Power Supplies</p>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fas fa-code"></i></div>
+              <h4>Languages</h4>
+              <p>Python, MATLAB</p>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Tools & Technologies</h3>
+          <div class="tools-container">
+            <div class="tool-tag">MATLAB (Simulink)</div>
+            <div class="tool-tag">Altium</div>
+            <div class="tool-tag">Ansys HFSS</div>
+            <div class="tool-tag">PLECS</div>
+            <div class="tool-tag">AutoCAD Electrical</div>
+            <div class="tool-tag">ADS</div>
+            <div class="tool-tag">SolidWorks</div>
+            <div class="tool-tag">Sigrity</div>
+            <div class="tool-tag">Proteus</div>
+            <div class="tool-tag">LTSpice</div>
+            <div class="tool-tag">I2C</div>
+            <div class="tool-tag">SPI</div>
+            <div class="tool-tag">UART</div>
+            <div class="tool-tag">CAN</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Experience</h2>
+        <div class="underline"></div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-items" id="experience-timeline">
+          <!-- Will be populated by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>My Projects</h2>
+        <div class="underline"></div>
+      </div>
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="power">Power Electronics</button>
+        <button class="filter-btn" data-filter="embedded">Embedded Systems</button>
+        <button class="filter-btn" data-filter="simulation">Simulation</button>
+      </div>
+      <div class="projects-grid" id="projects-grid">
+        <!-- Will be populated by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Get In Touch</h2>
+        <div class="underline"></div>
+      </div>
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-text">
+              <h3>Location</h3>
+              <p>San Diego, California</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-text">
+              <h3>Email</h3>
+              <p>cranade7@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="contact-text">
+              <h3>Phone</h3>
+              <p>+1 619 714 0492</p>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="https://linkedin.com/in/chinmay-ranade" target="_blank" class="social-link">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/cranade7" target="_blank" class="social-link">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form id="contact-form">
+            <div class="form-group">
+              <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <input type="text" id="subject" name="subject" placeholder="Subject" required>
+            </div>
+            <div class="form-group">
+              <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn primary-btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2025 Chinmay Ranade. All Rights Reserved.</p>
+        <div class="back-to-top">
+          <a href="#home"><i class="fas fa-arrow-up"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="modal-body"></div>
     </div>
   </div>
 
-  <script>
-    const modalBg = document.getElementById("modal-bg");
-    const modalContent = document.getElementById("modal-content");
-
-    function showModal(contentHTML) {
-      modalContent.innerHTML = contentHTML;
-      modalBg.style.display = "flex";
-      document.body.style.overflow = "hidden";
-    }
-
-    function closeModal() {
-      modalBg.style.display = "none";
-      modalContent.innerHTML = "";
-      document.body.style.overflow = "auto";
-    }
-  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
