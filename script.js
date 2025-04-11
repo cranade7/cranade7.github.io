@@ -71,7 +71,7 @@ const projectData = [
     future: "Hardware controller testing"
   },
   {
-    image: "proj3.png",
+    image: "proj3.jpg",
     title: "Bidirectional DC-DC Converter",
     duration: "Oct 2024 – Dec 2024",
     description: "PLECS simulation of GaN-based bidirectional converter with closed-loop PI.",
@@ -83,7 +83,7 @@ const projectData = [
     future: "PCB prototyping"
   },
   {
-    image: "proj4.png",
+    image: "proj4.jpg",
     title: "Autonomous Parking System",
     duration: "Feb 2022 – May 2022",
     description: "Built a robot that detects parking space using IR + ultrasonic sensors.",
@@ -95,7 +95,7 @@ const projectData = [
     future: "Add camera + image detection"
   },
   {
-    image: "proj5.png",
+    image: "proj5.jpg",
     title: "Microstrip Line Design (ADS)",
     duration: "Aug 2024 – Oct 2024",
     description: "Designed and matched a 50-ohm microstrip line using TX-Line and ADS.",
@@ -107,7 +107,7 @@ const projectData = [
     future: "Implement as PCB trace"
   },
   {
-    image: "proj6.png",
+    image: "proj6.jpg",
     title: "Power/Ground Noise Optimization",
     duration: "Oct 2024 – Dec 2024",
     description: "Used Cadence PowerSI to optimize capacitor placement and reduce ripple.",
@@ -119,7 +119,7 @@ const projectData = [
     future: "Integrate SI analysis"
   },
   {
-    image: "proj7.png",
+    image: "proj7.jpg",
     title: "Human-Following Robot",
     duration: "Feb 2023 – May 2023",
     description: "Built a robot that follows a human using Bluetooth RSSI and avoids obstacles.",
