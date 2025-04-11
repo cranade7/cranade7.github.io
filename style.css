@@ -8,47 +8,44 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Hero Banner */
-
-}
+/* Hero Section */
 .hero {
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-  color: white;
-  padding: 3rem 1rem;
-  text-align: center;
-}
-.hero h1 {
-  font-size: 2.5rem;
-}
-.hero h1 span {
-  color: #00d4ff;
-}
-.hero p {
-  font-size: 1.2rem;
-  margin: 0.5rem 0 1rem;
-}
-.hero nav {
-  margin-top: 1rem;
-}
-.hero nav a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 1rem;
-  font-weight: 500;
   position: relative;
 }
-.hero nav a::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  background: #00d4ff;
-  left: 0;
-  bottom: -4px;
-  transition: 0.3s ease;
-}
-.hero nav a:hover::after {
+.cover-photo {
   width: 100%;
+  height: 360px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.hero-card {
+  max-width: 600px;
+  margin: -180px auto 2rem;
+  background: rgba(15, 32, 39, 0.88);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  color: white;
+}
+.hero-card h1 {
+  font-size: 2rem;
+}
+.hero-card h1 span {
+  color: #00d4ff;
+}
+.hero-card nav {
+  margin-top: 1rem;
+}
+.hero-card nav a {
+  color: #00d4ff;
+  text-decoration: none;
+  margin: 0 0.75rem;
+  font-weight: 500;
+}
+.hero-card nav a:hover {
+  color: #fff;
 }
 
 /* Section Styles */
@@ -63,22 +60,6 @@ h2 {
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
 }
-/* Profile Image Styling */
-.profile-pic {
-  width: 160px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #00d4ff;
-  box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3);
-  margin: 2rem auto 1rem;
-  display: block;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.profile-pic:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.5);
-}
 
 /* Skills Section */
 .skills-container > div {
@@ -87,7 +68,6 @@ h2 {
   padding: 1rem;
   border-left: 4px solid #00d4ff;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  animation: fadeInUp 0.5s ease forwards;
 }
 
 /* Cards Layout */
@@ -104,13 +84,11 @@ h2 {
   padding: 1rem;
   flex: 1 1 280px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease;
   cursor: pointer;
-  animation: fadeIn 0.6s ease forwards;
 }
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 .card img {
   width: 100%;
@@ -160,7 +138,6 @@ h2 {
   max-width: 700px;
   width: 90%;
   position: relative;
-  animation: scaleIn 0.3s ease forwards;
 }
 .close {
   position: absolute;
@@ -170,24 +147,19 @@ h2 {
   cursor: pointer;
 }
 
-/* Animations */
-@keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-@keyframes fadeInUp {
-  0% { opacity: 0; transform: translateY(10px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-@keyframes scaleIn {
-  0% { transform: scale(0.8); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
-}
-
 /* Mobile */
 @media (max-width: 768px) {
-  .hero h1 { font-size: 1.8rem; }
-  .hero p { font-size: 1rem; }
-  .hero nav a { margin: 0 0.5rem; }
-  .card { flex: 1 1 100%; }
+  .hero-card {
+    margin: -120px 1rem 2rem;
+    padding: 1.5rem;
+  }
+  .hero-card h1 {
+    font-size: 1.6rem;
+  }
+  .hero-card nav a {
+    margin: 0 0.5rem;
+  }
+  .card {
+    flex: 1 1 100%;
+  }
 }
