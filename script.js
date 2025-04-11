@@ -1,145 +1,182 @@
 const experienceData = [
   {
     image: "exp1.png",
-    title: "Electrical Engineering Intern - Hyaxiom Inc.",
-    duration: "June 2024 – August 2024",
-    description: "Worked on HV pre-charge circuits, rectifier thermal design, and PLC integration.",
-    github: "",
-    skills: "AutoCAD Electrical, HV Circuits",
-    technologies: "PLC, VFD, HV Stack",
-    learnings: "System validation, FMEA"
+    title: "Electrical Engineering Intern",
+    company: "Hyaxiom (Doosan)",
+    duration: "May 2024 – Aug 2024",
+    description: "Worked on HV systems including pre-charge circuits, PLC integration, and VFDs.",
+    responsibilities: "Created AutoCAD Electrical diagrams, performed HV stack testing.",
+    tools: "AutoCAD, Oscilloscope, CAN Analyzer",
+    skills: "System Integration, HV Safety",
+    learnings: "Industrial-grade circuit development"
   },
   {
     image: "exp2.png",
-    title: "Teaching Assistant - SDSU",
-    duration: "Aug 2023 – Present",
-    description: "Conducted E&M labs, graded assignments, and supported mechatronics students.",
-    github: "",
-    skills: "Education, TA duties",
-    technologies: "Oscilloscope, Sensors",
-    learnings: "Communication, Instruction"
+    title: "Teaching Assistant",
+    company: "San Diego State University",
+    duration: "Jan 2024 – Present",
+    description: "Assisted in E&M and Mechatronics labs. Helped students debug circuits.",
+    responsibilities: "Setup experiments, guided students, graded lab reports.",
+    tools: "Multimeter, Function Generator, Oscilloscope",
+    skills: "Mentorship, Hands-on Circuits",
+    learnings: "Reinforced concepts through teaching"
   },
   {
     image: "exp3.png",
-    title: "Solar Subsystem Head - Team Hyperion",
-    duration: "Sept 2021 – Jan 2023",
-    description: "Led solar EV development. Designed converters and ECU communication systems.",
-    github: "",
-    skills: "MPPT, DC-DC, CAN, I2C",
-    technologies: "Solar Panels, Battery",
-    learnings: "Team management"
+    title: "Quality Assurance Intern",
+    company: "Electronet",
+    duration: "Jan 2022 – Feb 2022",
+    description: "Tested flowmeters, debugged level sensor boards, improved SMPS efficiency.",
+    responsibilities: "Circuit analysis, QA logs, PCB feedback",
+    tools: "Multimeter, Lab PSU, Soldering",
+    skills: "Troubleshooting, QA",
+    learnings: "Real-world hardware validation"
   },
   {
     image: "exp4.png",
-    title: "Quality Engineer Intern - Electronet",
-    duration: "Jan 2022 – Feb 2022",
-    description: "Resolved issues in SMPS and level sensors, improved PCB size and efficiency.",
-    github: "",
-    skills: "SMPS, PCB Debugging",
-    technologies: "Ultrasonic Sensors",
-    learnings: "QA, debugging"
+    title: "Solar Electrical Lead",
+    company: "Team Hyperion",
+    duration: "Jul 2021 – Aug 2023",
+    description: "Led electrical team for solar EV. Designed MPPT, buck converters, and CAN modules.",
+    responsibilities: "Managed solar subsystem, implemented ECU logic.",
+    tools: "MPPT, ESP32, CAN, Solar Panels",
+    skills: "Power Electronics, Leadership",
+    learnings: "System integration in EV context"
   }
 ];
 
 const projectData = [
   {
     image: "proj1.png",
-    title: "Wireless Charging System",
+    title: "Wireless Charging for Devices",
     duration: "Oct 2023 – Dec 2023",
-    description: "Simulated resonant coupling WPT in MATLAB and Ansys.",
+    description: "Simulated a resonant inductive wireless charging system using Ansys and Simulink.",
     github: "https://github.com/cranade7/WPT-for-small-Devices",
-    skills: "Wireless Charging",
-    technologies: "Simulink, Ansys",
-    learnings: "Efficiency tuning",
-    future: "Closed-loop misalignment control"
+    tools: "Simulink, Ansys",
+    skills: "WPT, Resonant Coupling",
+    keyFindings: "Achieved 86% efficiency at optimal coupling distance.",
+    learnings: "Tuned coils for max transfer",
+    future: "Closed-loop battery integration"
   },
   {
     image: "proj2.png",
-    title: "Human Following Robot",
-    duration: "Dec 2022 – Apr 2023",
-    description: "Bluetooth + RSSI controlled luggage robot with ESP32.",
-    github: "https://github.com/cranade7/-Human-Following-Luggage-Carrying-Robot",
-    skills: "RSSI, ESP32, Embedded",
-    technologies: "Solar, L298N, HMC5883L",
-    learnings: "Navigation",
-    future: "AI-based tracking"
+    title: "Microgrid + EV Charging",
+    duration: "Jan 2024 – May 2024",
+    description: "Modeled V2G + G2V EV charging with PV-based microgrid in MATLAB.",
+    github: "https://github.com/cranade7/Microgrid-V2G-and-G2V",
+    tools: "MATLAB, Simulink",
+    skills: "Droop Control, Battery Modeling",
+    keyFindings: "Bidirectional charging stabilized grid fluctuations.",
+    learnings: "EV scheduling in smart grids",
+    future: "Hardware controller testing"
   },
   {
     image: "proj3.png",
-    title: "Microgrid + EV Charging",
-    duration: "Jan 2024 – May 2024",
-    description: "Designed bidirectional grid for EV using solar + battery.",
-    github: "https://github.com/cranade7/Microgrid-V2G-and-G2V",
-    skills: "Grid Control",
-    technologies: "PV, Buck-Boost",
-    learnings: "V2G & G2V control",
-    future: "Real-time HIL"
+    title: "Bidirectional DC-DC Converter",
+    duration: "Oct 2024 – Dec 2024",
+    description: "PLECS simulation of GaN-based bidirectional converter with closed-loop PI.",
+    github: "",
+    tools: "PLECS, MATLAB, GaN",
+    skills: "Thermal Modeling, High-Freq Control",
+    keyFindings: "Reduced switching losses by 20%.",
+    learnings: "Efficiency tuning via PI",
+    future: "PCB prototyping"
   },
   {
     image: "proj4.png",
-    title: "PCB Power Integrity Simulation",
-    duration: "Aug 2024 – Dec 2024",
-    description: "Used Cadence to reduce voltage ripple and optimize capacitor placement.",
-    github: "https://github.com/cranade7/PCB-Simulation-and-Power-Integrity",
-    skills: "Signal/Power Integrity",
-    technologies: "PowerSI, Cadence",
-    learnings: "EMI design",
-    future: "WBG device support"
+    title: "Autonomous Parking System",
+    duration: "Feb 2022 – May 2022",
+    description: "Built a robot that detects parking space using IR + ultrasonic sensors.",
+    github: "https://github.com/cranade7/Autonomous-Parking-System",
+    tools: "IR, Ultrasonic, Servo",
+    skills: "Obstacle Avoidance, Embedded Logic",
+    keyFindings: "Consistent 30cm margin precision.",
+    learnings: "Sensor coordination",
+    future: "Add camera + image detection"
   },
   {
     image: "proj5.png",
-    title: "Bidirectional DC-DC (GaN/SiC)",
-    duration: "Oct 2024 – Dec 2024",
-    description: "PLECS simulation of EV energy converter with thermal models.",
+    title: "Microstrip Line Design (ADS)",
+    duration: "Aug 2024 – Oct 2024",
+    description: "Designed and matched a 50-ohm microstrip line using TX-Line and ADS.",
     github: "",
-    skills: "WBG Switching",
-    technologies: "PLECS, PWM",
-    learnings: "Closed-loop PI",
-    future: "Hardware test"
+    tools: "ADS, HFSS",
+    skills: "Impedance Matching, RF Layout",
+    keyFindings: "VSWR < 1.1 at 2.4 GHz.",
+    learnings: "Transmission line tuning",
+    future: "Implement as PCB trace"
   },
   {
     image: "proj6.png",
-    title: "Autonomous Parking System",
-    duration: "May 2022 – Aug 2022",
-    description: "Ultrasonic + IR based path following robot with servo steering.",
-    github: "https://github.com/cranade7/Autonomous-Parking-System",
-    skills: "Ultrasonic, Path Control",
-    technologies: "ESP32, Servo",
-    learnings: "Obstacle logic",
-    future: "Camera enhancement"
+    title: "Power/Ground Noise Optimization",
+    duration: "Oct 2024 – Dec 2024",
+    description: "Used Cadence PowerSI to optimize capacitor placement and reduce ripple.",
+    github: "https://github.com/cranade7/PCB-Simulation-and-Power-Integrity",
+    tools: "PowerSI, Cadence",
+    skills: "Power Integrity, EMI Mitigation",
+    keyFindings: "Ripple noise dropped 33%.",
+    learnings: "Layer stackup impacts on EMI",
+    future: "Integrate SI analysis"
+  },
+  {
+    image: "proj7.png",
+    title: "Human-Following Robot",
+    duration: "Feb 2023 – May 2023",
+    description: "Built a robot that follows a human using Bluetooth RSSI and avoids obstacles.",
+    github: "https://github.com/cranade7/-Human-Following-Luggage-Carrying-Robot",
+    tools: "ESP32, HC-05, Ultrasonic",
+    skills: "RSSI, Navigation",
+    keyFindings: "Smooth follow within 1.5m range.",
+    learnings: "Wireless distance estimation",
+    future: "Upgrade to vision model"
   }
 ];
 
-const loadCards = (data, containerId) => {
+function loadCards(data, containerId) {
   const container = document.getElementById(containerId);
   data.forEach(item => {
     const card = document.createElement("div");
     card.classList.add("card");
     card.innerHTML = `
-      <img src="${item.image}" />
-      <strong>${item.title}</strong><br />
+      <img src="${item.image}" alt="${item.title}">
+      <strong>${item.title}</strong><br>
       <small>${item.duration}</small>
     `;
-    card.onclick = () => openModal(item);
+    card.onclick = () => openModal(item, containerId.includes("experience") ? "exp" : "proj");
     container.appendChild(card);
   });
-};
+}
 
-const openModal = (item) => {
+function openModal(item, type) {
   const modal = document.getElementById("modal");
   const body = document.getElementById("modal-body");
   modal.classList.remove("hidden");
-  body.innerHTML = `
-    <h3>${item.title}</h3>
-    <p><strong>Duration:</strong> ${item.duration}</p>
-    <p><strong>Description:</strong> ${item.description}</p>
-    ${item.github ? `<p><strong>GitHub:</strong> <a href="${item.github}" target="_blank">${item.github}</a></p>` : ""}
-    <p><strong>Skills:</strong> ${item.skills}</p>
-    <p><strong>Technologies:</strong> ${item.technologies}</p>
-    <p><strong>Learnings:</strong> ${item.learnings}</p>
-    ${item.future ? `<p><strong>Future Work:</strong> ${item.future}</p>` : ""}
-  `;
-};
+
+  if (type === "exp") {
+    body.innerHTML = `
+      <h3>${item.title}</h3>
+      <p><strong>Company:</strong> ${item.company}</p>
+      <p><strong>Duration:</strong> ${item.duration}</p>
+      <p><strong>Description:</strong> ${item.description}</p>
+      <p><strong>Responsibilities:</strong> ${item.responsibilities}</p>
+      <p><strong>Tools:</strong> ${item.tools}</p>
+      <p><strong>Skills:</strong> ${item.skills}</p>
+      <p><strong>Learned:</strong> ${item.learnings}</p>
+    `;
+  } else {
+    body.innerHTML = `
+      <h3>${item.title}</h3>
+      <p><strong>Duration:</strong> ${item.duration}</p>
+      <p><strong>Description:</strong> ${item.description}</p>
+      ${item.github ? `<p><strong>GitHub:</strong> <a href="${item.github}" target="_blank">${item.github}</a></p>` : ""}
+      <p><strong>Tools:</strong> ${item.tools}</p>
+      <p><strong>Skills:</strong> ${item.skills}</p>
+      <p><strong>Key Findings:</strong> ${item.keyFindings}</p>
+      <p><strong>Learned:</strong> ${item.learnings}</p>
+      <p><strong>Future Work:</strong> ${item.future}</p>
+    `;
+  }
+}
 
 document.querySelector(".close").onclick = () => {
   document.getElementById("modal").classList.add("hidden");
