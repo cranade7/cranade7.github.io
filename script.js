@@ -58,18 +58,7 @@ const projectData = [
     learnings: "Resonance tuning and controller design under varying coupling coefficients.",
     future: "Hardware validation and adaptive real-time control for EV applications."
 },
-  {
-    image: "proj1.png",
-    title: "Wireless Charging for Devices",
-    duration: "Oct 2023 – Dec 2023",
-    description: "Simulated a resonant inductive wireless charging system using Ansys and Simulink.",
-    github: "https://github.com/cranade7/WPT-for-small-Devices",
-    tools: "Simulink, Ansys",
-    skills: "WPT, Resonant Coupling",
-    keyFindings: "Achieved 86% efficiency at optimal coupling distance.",
-    learnings: "Tuned coils for max transfer",
-    future: "Closed-loop battery integration"
-  },
+  
   {
     image: "proj2.png",
     title: "Microgrid + EV Charging",
@@ -93,6 +82,18 @@ const projectData = [
     keyFindings: "Reduced switching losses by 20%.",
     learnings: "Efficiency tuning via PI",
     future: "PCB prototyping"
+  },
+  {
+    image: "proj1.png",
+    title: "Wireless Charging for Devices",
+    duration: "Oct 2023 – Dec 2023",
+    description: "Simulated a resonant inductive wireless charging system using Ansys and Simulink.",
+    github: "https://github.com/cranade7/WPT-for-small-Devices",
+    tools: "Simulink, Ansys",
+    skills: "WPT, Resonant Coupling",
+    keyFindings: "Achieved 86% efficiency at optimal coupling distance.",
+    learnings: "Tuned coils for max transfer",
+    future: "Closed-loop battery integration"
   },
   {
     image: "proj4.jpg",
