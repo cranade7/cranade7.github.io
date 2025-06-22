@@ -47,6 +47,18 @@ const experienceData = [
 
 const projectData = [
   {
+    image: "proj8.jpg",
+    title: "Wireless Charging with Misalignment Resilience",
+    duration: "Jan 2025 – May 2025",
+    description: "Designed and simulated an EV wireless charging system using ZVS converters and CC–CV control, optimized for misalignment tolerance.",
+    github: "",
+    tools: "Simulink, MATLAB",
+    skills: "Resonant Topologies, ZVS, PI Control, Battery Charging",
+    keyFindings: "Maintained 78–81% efficiency under up to 5 cm vertical and 18 cm lateral coil misalignment.",
+    learnings: "Resonance tuning and controller design under varying coupling coefficients.",
+    future: "Hardware validation and adaptive real-time control for EV applications."
+},
+  {
     image: "proj1.png",
     title: "Wireless Charging for Devices",
     duration: "Oct 2023 – Dec 2023",
@@ -129,19 +141,8 @@ const projectData = [
     keyFindings: "Smooth follow within 1.5m range.",
     learnings: "Wireless distance estimation",
     future: "Upgrade to vision model"
-  },
-  {
-    image: "proj8.jpg",
-    title: "Wireless Charging with Misalignment Resilience",
-    duration: "Jan 2025 – May 2025",
-    description: "Designed and simulated an EV wireless charging system using ZVS converters and CC–CV control, optimized for misalignment tolerance.",
-    github: "",
-    tools: "Simulink, MATLAB",
-    skills: "Resonant Topologies, ZVS, PI Control, Battery Charging",
-    keyFindings: "Maintained 78–81% efficiency under up to 5 cm vertical and 18 cm lateral coil misalignment.",
-    learnings: "Resonance tuning and controller design under varying coupling coefficients.",
-    future: "Hardware validation and adaptive real-time control for EV applications."
-}
+  }
+  
 ];
 
 function loadCards(data, containerId) {
